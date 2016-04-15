@@ -41,21 +41,36 @@ gitはシンボリックリンクもあつかえるようだ。
 
 * events
 	+ event4
-		- john
+		- John
 			* some.hs
 			* kansou.md
-		- thomas
+		- Thomas
 			* other.hs
 			* question.md
 	+ event5
-		- john
+		- John
 			* cool.hs
 			* request.md
 * members
-	+ jhon
-		- event4 -> ../events/event4/jhon
-		- event5 -> ../events/event5/jhon
-	+ thomas
-		- event4 -> ../events/event4/thomas
+	+ Jhon
+		- event4 -> ../events/event4/Jhon
+		- event5 -> ../events/event5/Jhon
+	+ Thomas
+		- event4 -> ../events/event4/Thomas
 
 シンボリックリンクを自動で生成するツールを作成しようかな。
+
+#### 自動リンク生成ツールの仕様
+
+* eventsディレクトリ下の名前がeventからはじまるディレクトリについて
+	+ ディレクトリd以下の
+		- 人名(大文字ではじまる)ディレクトリmについて
+			* members以下になければディレクトリmを作成
+			* m以下にシンボリックリンクdがなければ作成
+
+といった感じだろうか。
+メンバー用のディレクトリは必ず大文字はじまりにする。
+そうすることで特殊用途のディレクトリとの名前かぶりが避けられるだろう。
+シンボリックリンクはSystem.Posix.Files.createSymbolicLinkがつかえるだろう。
+
+あとでコード書くこと。

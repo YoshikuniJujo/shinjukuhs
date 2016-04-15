@@ -40,29 +40,29 @@ gitはシンボリックリンクもあつかえるようだ。
 両方の長所をとることはできるだろうか。
 
 * events
-	+ event4
+	+ event\_004
 		- John
 			* some.hs
 			* kansou.md
 		- Thomas
 			* other.hs
 			* question.md
-	+ event5
+	+ event\_005
 		- John
 			* cool.hs
 			* request.md
 * members
 	+ Jhon
-		- event4 -> ../events/event4/Jhon
-		- event5 -> ../events/event5/Jhon
+		- event_004 -> ../events/event_004/Jhon
+		- event_005 -> ../events/event_005/Jhon
 	+ Thomas
-		- event4 -> ../events/event4/Thomas
+		- event_004 -> ../events/event_004/Thomas
 
 シンボリックリンクを自動で生成するツールを作成しようかな。
 
 #### 自動リンク生成ツールの仕様
 
-* eventsディレクトリ下の名前がeventからはじまるディレクトリについて
+* eventsディレクトリ下の名前がevent\_からはじまるディレクトリについて
 	+ ディレクトリd以下の
 		- 人名(大文字ではじまる)ディレクトリmについて
 			* members以下になければディレクトリmを作成
@@ -73,4 +73,17 @@ gitはシンボリックリンクもあつかえるようだ。
 そうすることで特殊用途のディレクトリとの名前かぶりが避けられるだろう。
 シンボリックリンクはSystem.Posix.Files.createSymbolicLinkがつかえるだろう。
 
-あとでコード書くこと。
+events以下でリンクを生成ずみのディレクトリをマークするためのファイルが必要だ。
+そうしないとevent\_XXXがふえたときに処理が効率が低下するだろう。
+
+	events/linked
+
+に1行1ディレクトリで記録すればいいだろう。
+
+	event_004
+	event_005
+	event_006
+
+のような感じだ。
+
+あとでコード書く。

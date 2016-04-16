@@ -23,11 +23,15 @@ main = do
 symlink :: FilePath -> FilePath -> IO ()
 symlink ed md = do
 	createDirectoryIfMissing False m
-	createSymbolicLink ("../../events" </> ed </> md) (m </> ed)
-	putStrLn $ "ln ../../events/" ++ ed ++ " " ++ (m </> ed)
-	appendFile "events/linked" (ed ++ "\n")
+	b <- doesDirectoryExist me
+	if b
+		then putStrLn $ me ++ " is already exist"
+		else createSymbolicLink ("../../events" </> ed </> md) me
+	putStrLn $ "ln ../../events/" ++ ed ++ " " ++ me
+--	appendFile "events/linked" (ed ++ "\n")
 	where
 	m = "members" </> md
+	me = m </> ed
 
 msgTopDir, uuidTopDir :: String
 msgTopDir = "Error: run in top directory"

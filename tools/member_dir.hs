@@ -26,8 +26,8 @@ symlink ed md = do
 	b <- doesDirectoryExist me
 	if b
 		then putStrLn $ me ++ " is already exist"
-		else createSymbolicLink ("../../events" </> ed </> md) me
-	putStrLn $ "ln ../../events/" ++ ed ++ " " ++ me
+		else do	createSymbolicLink ("../../events" </> ed </> md) me
+			putStrLn $ "ln ../../events/" ++ ed ++ " " ++ me
 --	appendFile "events/linked" (ed ++ "\n")
 	where
 	m = "members" </> md

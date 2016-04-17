@@ -1,0 +1,27 @@
+brew install cabal-install
+
+//超長えぇぇええ
+cabal install alex happy yesod-bin
+
+//雛形作りたい場所の作成
+mkdir ~/sources/haskell/yesodtest
+cd ~/sources/haskell
+
+yesod init
+
+
+========
+
+//後述　こっちの方が良さげ
+//クイックスタートにはstack使うの推奨！って書いてあった
+//   http://www.yesodweb.com/page/quickstart
+
+brew install haskell-stack
+
+stack new my-project yesod-sqlite && cd my-project
+
+stack install yesod-bin cabal-install --install-ghc
+
+stack exec -- yesod devel
+
+View your Yesod site at http://localhost:3000/

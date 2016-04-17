@@ -73,5 +73,3 @@ github側に似たような仕組みはないかな?
 		- event_005 -> ../../events/event_005/Jhon
 	+ Thomas
 		- event_004 -> ../../events/event_004/Thomas
-
-シンボリックリンクを自動で生成するツールを作成しようかな。

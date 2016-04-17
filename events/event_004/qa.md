@@ -18,12 +18,12 @@ friend n = n ++ " is my friend"
 friend Nothing = "no my frined" ここがエラーを出す...
 ```
 
+上記のコードのエラー原因がわかりません
+
 これは型エラーですね。
 文字列の型はStringですがここで求められている型はMaybe Stringです。
 String型はJustをつけることでMaybe String型となります。
 Maybe値のパターンマッチのところを読んでみてください。
-
-上記のコードのエラー原因がわかりません
 
 - 質問(yoshixmk)
   - クーラー寒いと思う人いますか？僕ちょっと寒いかも。

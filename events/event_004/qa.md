@@ -5,3 +5,7 @@ conflictしたときは
 	% git pull
 
 などで対応してください。
+
+- 質問(DaichiSatio)
+  - encrypt m = xxcrypt 138689 13 m から encrypt = xxcrypt 138689 13
+  - なぜmを省略することができるのかがわからないです。

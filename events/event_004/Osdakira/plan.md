@@ -9,8 +9,8 @@ https://github.com/osdakira/haskell_test/tree/master/shunjukuhs
 - fibonacci.hs
 
 畳み込みから、フィボナッチまで。
-folder が分からない。
-無限リストイメージしづらい。
+- foldr が分からない。
+- 無限リストイメージしづらい。
 
 # 参考
 - クイックチェック という技術

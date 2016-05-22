@@ -27,6 +27,9 @@ Eee PC 900をコモディティとして使う。
 
 ![Eee PC 900](http://ecx.images-amazon.com/images/I/41TDG6FsN0L._SX355_.jpg)
 
+ルータとしてつかったり、レクチャー用につかったり。
+以前にHaskellを教えたときはこれをつかった。
+
 ### キーボード
 
 Happy Hacking Keyboard US

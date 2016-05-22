@@ -33,7 +33,7 @@
   * 引数をApplicative Functorに入れる関数
 * `<*>`関数
   * f (a -> b) -> f a -> f b
-* メリットは不明
+* 複数の引数をとるものに対応できる
 
 ## Monad
 * Applicative Functorの拡張

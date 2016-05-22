@@ -7,3 +7,42 @@
   * それぞれのメリットなど
 
 * Yesod本の続き
+
+# 結果
+## 型クラス（Typeclass）
+  * ふるまい（behavior）を定義するインタフェース
+  * ふるまいとデータの型を定義するデザパタ
+
+## Functor、Appricative Functor、Monad
+
+* Functor -> Appricative Functor -> Monad
+* ヒトカゲ --------> リザード ------> リザードン
+
+## Functor
+* 値を箱に入れる型クラス
+* map関数を持つ -> データ構造のデータを変換できる
+
+### ファンクタ則
+* fmap id = id
+* fmap (f . g) == fmap f . fmap g
+## Applicative Functor
+* Functorの拡張
+* 関数をFunctorに入れることもできる型クラス
+* pure関数
+  * a -> f a
+  * 引数をApplicative Functorに入れる関数
+* `<*>`関数
+  * f (a -> b) -> f a -> f b
+* メリットは不明
+
+## Monad
+* Applicative Functorの拡張
+* return関数
+  * a -> m a
+  * 引数をMonadに入れる関数
+  * Applciative Functorのpure関数と同じ
+* `>>=`関数
+  * バインド関数
+  * m a -> (a -> m b) -> m b
+* `>>`関数
+  * m a -> m b -> m b

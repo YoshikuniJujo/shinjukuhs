@@ -25,4 +25,61 @@ Intelの一番安いCPU、メモリは多め(8GBから16GBくらい)、
 
 Eee PC 900をコモディティとして使う。
 
-![Eee PC 900](https://upload.wikimedia.org/wikipedia/commons/6/66/ASUS_Eee_PC_900_0010.JPG)
+![Eee PC 900](http://ecx.images-amazon.com/images/I/41TDG6FsN0L._SX355_.jpg)
+
+ルータとしてつかったり、レクチャー用につかったり。
+以前にHaskellを教えたときはこれをつかった。
+
+### キーボード
+
+Happy Hacking Keyboard US
+
+![HHKB](http://www.pfu.fujitsu.com/hhkeyboard/lineup/images/thumb_pdkb400wns_l.jpg)
+
+OS
+--
+
+### ホスト
+
+Gentoo Linuxを10年以上つかっている。
+純関数型OSといわれているNixOSが気になる。
+
+### 仮想化
+
+KVMをつかって仮想化している。
+
+### ゲスト
+
+ゲストもGentoo Linux
+
+ウィンドウマネージャー
+----------------------
+
+ウィンドウマネージャーにはXMonadをつかっている。
+Haskell製のタイル型WMだ。
+設定ファイルがHaskellのコードになっている。
+
+ターミナルエミュレータ
+----------------------
+
+ターミナルエミュレータにはrxvt-unicodeをつかっている。
+黒地に白。
+白地に黒よりも目のつかれがずっと軽減される。
+また、urxvt\*saveLines:0とすることでスクロールバーがなくなりすっきりする。
+
+シェル
+------
+
+ZshをVimモードでつかっている。
+コマンド履歴をjkでよびだすなど便利。
+
+エディタ
+--------
+
+Vim
+
+日本語入力
+----------
+
+TUT-Codeという日本語直接入力をつかっている。
+たとえばVimのインクリメンタルサーチが漢字でもつかえる。

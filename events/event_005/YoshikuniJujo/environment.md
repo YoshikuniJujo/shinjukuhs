@@ -25,7 +25,7 @@ Intelの一番安いCPU、メモリは多め(8GBから16GBくらい)、
 
 Eee PC 900をコモディティとして使う。
 
-![Eee PC 900](https://upload.wikimedia.org/wikipedia/commons/6/66/ASUS_Eee_PC_900_0010.JPG)
+![Eee PC 900](http://ecx.images-amazon.com/images/I/41TDG6FsN0L._SX355_.jpg)
 
 ### キーボード
 

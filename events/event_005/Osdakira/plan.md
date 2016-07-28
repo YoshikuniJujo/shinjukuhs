@@ -84,3 +84,27 @@ Prelude Data.Char> filter even [0..10]
 => [0, 2, 4, 6, 8, 10]
 ```
 
+## partition
+
+```
+Prelude Data.Char Data.List> partition even [0..10]
+([0,2,4,6,8,10],[1,3,5,7,9])
+```
+
+```
+[44] pry(main)> (0..10).partition(&:even?)
+=> [[0, 2, 4, 6, 8, 10], [1, 3, 5, 7, 9]]
+```
+
+```
+Prelude Data.Char Data.List> foldr (\x (ts, es) -> if even x then (x : ts, es) else (ts, x : es)) ([], []) [0..10]
+([0,2,4,6,8,10],[1,3,5,7,9])
+```
+
+```
+[47] pry(main)> (0..10).reduce([[],[]]) { |(ts, es), x| x.even? ? [ts + [x], es] : [ts, es + [x]] }
+=> [[0, 2, 4, 6, 8, 10], [1, 3, 5, 7, 9]]
+```
+
+
+
